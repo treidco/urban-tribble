@@ -8,6 +8,8 @@
 *.so
 *.dylib
 
+manning-golang-algos
+
 # Test binary, built with `go test -c`
 *.test
 

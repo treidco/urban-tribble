@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -33,8 +34,11 @@ func main() {
 	fmt.Println()
 
 	// Sort and display the result.
+	begin := time.Now().UnixMilli()
 	sortFunc(slice)
+	end := time.Now().UnixMilli()
 	printSlice(slice, 40)
+	fmt.Printf("Slice sorted in %d milliseconds\n", end-begin)
 
 	// Verify that it's sorted.
 	checkSorted(slice)

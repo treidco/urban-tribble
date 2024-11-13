@@ -46,7 +46,6 @@ func TestAddCounts(t *testing.T) {
 
 func TestSortSlice(t *testing.T) {
 	input := []int{8, 3, 3, 2, 6, 1}
-	//counts := []int{0, 1, 1, 2, 0, 0, 1, 0, 1}
 	counted := []int{0, 1, 2, 4, 4, 4, 5, 5, 6}
 	expected := []int{1, 2, 3, 3, 6, 8}
 

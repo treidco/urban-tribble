@@ -22,6 +22,23 @@ func makeRandomSliceOfCustomers(numItems, max int) []Customer {
 	return slice
 }
 
+func makeCustomersFromInts(input []int) []Customer {
+	output := make([]Customer, len(input))
+	for i := 0; i <= len(input)-1; i++ {
+		customer := Customer{fmt.Sprintf("C%d", i), input[i]}
+		output[i] = customer
+	}
+	return output
+}
+
+func makeIntsFromCustomers(input []Customer) []int {
+	output := make([]int, len(input))
+	for i := 0; i <= len(input)-1; i++ {
+		output[i] = input[i].numPurchases
+	}
+	return output
+}
+
 func printSlice(slice []int, numItems int) {
 	if numItems < len(slice) {
 		fmt.Println(slice[:numItems])
